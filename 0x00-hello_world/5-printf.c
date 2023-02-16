@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Program thta prints exactly the proper grammer
+ * main - Program that prints exactly the proper grammer
  * Return: 0 (Success)
  */
 int main(void)
