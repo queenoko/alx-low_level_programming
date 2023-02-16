@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - Program that prints various types of datatypes"
- * Return 0 (success)
+ * main - Program that prints various types of datatypes
+ * Return: 0 (success)
  */
 int main(void)
 {
