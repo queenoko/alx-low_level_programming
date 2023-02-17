@@ -5,7 +5,7 @@
  * Return: Always 0 (success)
  */
 
-iny main(void)
+int main(void)
 {
 	int i, j;
 
