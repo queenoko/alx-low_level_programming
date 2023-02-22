@@ -15,7 +15,7 @@ int main(void)
 		{
 			y += x;
 		}
-		i++;
+		x++;
 	}
 	printf("%d\n", y);
 	return (0);
