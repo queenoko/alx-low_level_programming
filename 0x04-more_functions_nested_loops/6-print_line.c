@@ -8,7 +8,6 @@
 /**
  * print_line - Draw a straight line
  * @n: number of straight line
- * Return: 0
  */
 
 void print_line(int n)
@@ -21,5 +20,4 @@ void print_line(int n)
 			_putchar('_');
 	}
 	_putchar('\n');
-	return (0);
 }
