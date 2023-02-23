@@ -1,28 +1,23 @@
-/*
- * File: 101-print_number.c
- * Author: Queensly Udongwo
- */
-
 #include "main.h"
 /**
- * print_number - print integer
- * @n: integer
- * Return: 0
+ * print_number - Print integer
+ * @n: integer input
  */
 
 void print_number(int n)
 {
-
-	unsigned int num = n;
+	unsigned int m = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
-	}
-	if ((num / 10) > 0)
-		print_number(num / 10);
 
-	_putchar((num % 10) + '0');
+		m = -m;
+	}
+
+	if ((m / 10) > 0)
+		print_number(m / 10);
+
+	_putchar((m % 10) + '0');
 
 }
