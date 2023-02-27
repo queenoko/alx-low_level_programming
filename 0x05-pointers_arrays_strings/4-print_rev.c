@@ -8,17 +8,16 @@
 /**
  * print_rev -  prints a string, in reverse
  * @s: Input string
- * l is length i is index
  */
 
 void print_rev(char *s)
 {
-	int l = 0, i;
+	int len = 0, i;
 
 	while (s[i++])
-		l++;
+		len++;
 
-	for (i = l - 1; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 		_putchar(s[i]);
 
 	_putchar('\n');
