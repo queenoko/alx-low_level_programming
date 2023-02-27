@@ -45,9 +45,9 @@ int main(void)
 			}
 		}
 
-		for (i = 0; p[i]; i++)
+		for (i = 0; pas[i]; i++)
 		{
-			if (pas[i] >= (33n + diff2))
+			if (pas[i] >= (33 + diff2))
 			{
 				pas[i] -= diff2;
 				break;
