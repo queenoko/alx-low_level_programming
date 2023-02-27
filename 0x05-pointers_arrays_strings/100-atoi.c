@@ -12,28 +12,21 @@
 
 int _atoi(char *s)
 {
-	int sign;
-	unsigned int n;
-	char *tem;
+	int sign = 1;
+	unsigned int n = 0;
 
-	tem = s;
-	n = 0;
-	sign = 1;
-
-	while (*tem != '\0' && (*tem < '0' || *tem > '9'))
-	{
-		if (*tem == '-')
+	do {
+		if (*s == '-')
 			sign *= -1;
-		tem++;
-	}
-	if (*tem != '\0')
-	{
-		do {
-			n = n * 10 + (*tem - '0');
-			tem++;
-		}
 
-		while (*tem >= '0' && *tem <= '9');
-	}
+		else if (*s >= '0' && *s <= '9')
+			n = (n * 10) + (*s - '0');
+
+		else if (n > 0)
+			break;
+
+	} while (*s++);
+
 	return (n * sign);
+
 }
