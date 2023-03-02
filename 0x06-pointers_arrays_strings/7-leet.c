@@ -13,21 +13,23 @@
 
 char *leet(char *rep)
 {
-	int i, j;
-	char low[] = {'a', 'e', 'o', 't', 'l', '\0'};
-	char cap[] = {'A', 'E', 'O', 'T', 'L', '\0'};
-	char num[] = {'4', '3', '0', '7', '1', '\0'};
+	int ind1 = 0, ind2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	for (i = 0; rep[1] != '\0'; ++i)
+	while (rep[ind1])
 	{
-
-		for (j = 0; j < 5; j++)
+		for (ind2 = 0; ind2 <= 7; ind2++)
 		{
-			if (rep[i] == low[j] || rep[i] == cap[j])
-			{
-				rep[i] = num[j];
-			}
+			if (rep[ind1] == leet[ind2] ||
+			    rep[ind1] - 32 == leet[ind2])
+				rep[ind1] = ind2 + '0';
 		}
+
+		ind1++;
+
 	}
+
 	return (rep);
+
 }
+
