@@ -9,8 +9,8 @@
 
 int find_len(char *str);
 char *create_xarray(int size);
-char *iterate_zeros(char *str);
-void get_prod(char *prod, char *mult, int digit, int zeros);
+char *iterate_zeroes(char *str);
+void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
@@ -48,7 +48,7 @@ char *create_xarray(int size)
 		exit(98);
 
 	for (index = 0; index < (size - 1); index++)
-		array[index] = 'X';
+		array[index] = 'x';
 
 	array[index] = '\0';
 
@@ -56,12 +56,12 @@ char *create_xarray(int size)
 }
 
 /**
- * iterate_zeros - Iterates through a string of numbers containing leading
+ * iterate_zeroes - Iterates through a string of numbers containing leading
  * zeros until it hits a non-zero number
  * @str: String of numbers to iterate through
  * Return: pointer to the next zero element
  */
-char *iterate_zeros(char *str)
+char *iterate_zeroes(char *str)
 {
 	while (*str && *str == '0')
 		str++;
@@ -94,12 +94,12 @@ int get_digit(char c)
  * @prod: The buffer to store the result
  * @mult: The string of numbers
  * @digit: Single digit
- * @zeros: The necessary number of leading zeros
+ * @zeroes: The necessary number of leading zeros
  *
  * Description: If mult contains a non-digit, the function
  * exit with a status value of 98
  */
-void get_prod(char *prod, char *mult, int digit, int zeros)
+void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
 	int mult_len, num, tens = 0;
 
@@ -108,13 +108,13 @@ void get_prod(char *prod, char *mult, int digit, int zeros)
 
 	while (*prod)
 	{
-		*prod = 'X';
+		*prod = 'x';
 		prod++;
 	}
 
 	prod--;
 
-	while (zeros--)
+	while (zeroes--)
 	{
 		*prod = '0';
 		prod--;
@@ -154,7 +154,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 	while (*(next_prod + 1))
 		next_prod++;
 
-	for (; *final_prod != 'X'; final_prod--)
+	for (; *final_prod != 'x'; final_prod--)
 	{
 		num = (*final_prod - '0') + (*next_prod - '0');
 		num += tens;
@@ -165,7 +165,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 		next_len--;
 	}
 
-	for (; next_len >= 0 && *next_prod != 'X'; next_len--)
+	for (; next_len >= 0 && *next_prod != 'x'; next_len--)
 	{
 		num = (*next_prod - '0');
 		num += tens;
