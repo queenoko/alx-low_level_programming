@@ -194,7 +194,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  *
  * Description: If the number of arguments is incorrect or one number
  * contains non-digits, the function exit with a status of 98
- * Return: Always 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
