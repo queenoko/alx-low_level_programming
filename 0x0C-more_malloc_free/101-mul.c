@@ -31,7 +31,7 @@ int find_len(char *str)
 
 /**
  * create_xarray - Creates an array of chars and initialize it with
- * the character 'X'. Adds a terminating null byte
+ * the character 'x'. Adds a terminating null byte
  * @size: Size of array to be initialized
  *
  * Description: Insufficient space function exits with a status of 98
@@ -56,7 +56,7 @@ char *create_xarray(int size)
 }
 
 /**
- * iterate_zeroes - Iterates through a string of numbers containing leading
+ * iterate_zeroes - Iterates through a string of numbers containing leadin
  * zeros until it hits a non-zero number
  * @str: String of numbers to iterate through
  * Return: pointer to the next zero element
@@ -187,7 +187,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  *
  * Description: If the number of arguments is incorrect or one number
  * contains non-digits, the function exit with a status of 98
- * Return: 0
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
