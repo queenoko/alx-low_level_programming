@@ -1,15 +1,10 @@
-/*
- * File: 100-first.c
- * Author: Queensly Udongwo
- */
-
 #include <stdio.h>
 
 void first(void) __attribute__((constructor));
 
 /**
- * first - Prints a string before the main function is executed
- *
+ * first - Prints a string before the main
+ * function is executed
  */
 void first(void)
 {
