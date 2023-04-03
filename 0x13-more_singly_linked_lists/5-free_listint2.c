@@ -3,6 +3,8 @@
  * Author: Queensly Udongwo
  */
 
+#include "lists.h"
+
 /**
  * free_listint2 - Frees listint_t list
  * @head: Pointer to the address of listint_t list
