@@ -5,17 +5,18 @@
 
 #include "lists.h"
 
-size_t loop_list_count(listint_t *head);
+size_t loop_listint_count(listint_t *head);
 size_t free_listint_safe(listint_t **h);
 
 /**
- * loop_list_count - Counts the number of unique nodes in a looped linked list
+ * loop_listint_count - Counts the number of unique nodes in a
+ * looped linked list
  * @head: Checks pointer to the head of the listint_t
  *
  * Return: 0 if list is not looped, else the number of the unique
  * nodes in the list
  */
-size_t loop_list_count(listint_t *head)
+size_t loop_listint_count(listint_t *head)
 {
 	listint_t *node1, *node2;
 	size_t nodeS = 1;
@@ -67,7 +68,7 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *temp;
 	size_t nodeS, i;
 
-	nodeS = loop_list_count(*h);
+	nodeS = loop_listint_count(*h);
 
 	if (nodeS == 0)
 	{
