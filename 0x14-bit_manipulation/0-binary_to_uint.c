@@ -15,23 +15,18 @@
  */
 unsigned int binary_to_unit(const char *b)
 {
-	unsigned int n = 0, m = 1;
-	int length;
+	int ind;
+	unsigned int val = 0;
 
-	if (b == '\0')
+	if (!b)
 		return (0);
 
-	for (length = 0; b[length];)
-		length++;
-
-	for (length -= 1; length >= 0; length--)
+	for (ind = 0; b[ind]; ind++)
 	{
-		if (b[length] != '0' && b[length] != '1')
+		if (b[ind] < '0' || b[ind] > '1')
 			return (0);
-
-		n += (b[length] - '0') * m;
-		m *= 2;
+		val = 2 * val + (b[ind] - '0');
 	}
 
-	return (n);
+	return (val);
 }
