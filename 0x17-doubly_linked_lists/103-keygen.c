@@ -17,21 +17,21 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	codeme = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 
-	temp_c = (len ^ 59) & 63;
+	temp_c = (lent ^ 59) & 63;
 	pass[0] = codeme[temp_c];
 
 	temp_c = 0;
-	for (z = 0; z < len; z++)
+	for (z = 0; z < lent; z++)
 		temp_c += argv[1][z];
 	pass[1] = codeme[(temp_c ^ 79) & 63];
 
 	temp_c = 1;
-	for (z = 0; z < len; z++)
+	for (z = 0; z < lent; z++)
 		temp_c *= argv[1][z];
 	pass[2] = codeme[(temp_c ^ 85) & 63];
 
 	temp_c = 0;
-	for (z = 0; z < len; z++)
+	for (z = 0; z < lent; z++)
 	{
 		if (argv[1][z] > temp_c)
 			temp_c = argv[1][z];
@@ -40,7 +40,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	pass[3] = codeme[rand() & 63];
 
 	temp_c = 0;
-	for (z = 0; z < len; z++)
+	for (z = 0; z < lent; z++)
 		temp_c += (argv[1][z] * argv[1][z]);
 	pass[4] = codeme[(temp_c ^ 239) & 63];
 
