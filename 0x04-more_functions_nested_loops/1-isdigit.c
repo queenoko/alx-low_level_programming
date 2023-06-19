@@ -1,14 +1,8 @@
-/*
- * File: 1-isdigit.c
- * Author: Queensly Udongwo
- */
-
 #include "main.h"
 /**
- * _isdigit - Checks digit (0 through 9)
- * @c: The number to be checked
- *
- * Return: 1 if number is a digit, 0 not a digit
+ * _isdigit - checks digit from 0-9
+ * @c: Variable to be checked
+ * Return: 1 if number is digit else 0
  */
 
 int _isdigit(int c)
