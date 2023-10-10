@@ -3,7 +3,6 @@
 /**
  * linear_search - This searches for a value in an array of
  * integers using Linear search algorithm
- *
  * @array: This will input array for the function
  * @size: The size of the array
  * @value: The value to search in
@@ -21,7 +20,7 @@ int linear_search(int *array, size_t size, int value)
 
 	for (z = 0; z < size; z++)
 	{
-		printf("Value checked in array[%li] = [%i]\n", z, array[z]);
+		printf("Value checked array[%li] = [%i]\n", z, array[z]);
 		if (array[z] == value)
 		{
 			return (z);
